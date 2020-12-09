@@ -1,5 +1,6 @@
 -cp src
 -lib heaps
+-lib domkit
 -js hello.js
 -main Main
 -debug

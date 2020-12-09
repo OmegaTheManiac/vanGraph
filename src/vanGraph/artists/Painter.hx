@@ -4,23 +4,7 @@ import h2d.Scene;
 import vanGraph.objects.Vert;
 import vanGraph.objects.Graph;
 
-class Painter {
-    static private var instance(get, default) : Painter;
-    private var s2d : h2d.Scene;
-
-    private function new() {
-    }
-
-    static public function get_instance() : Painter {
-        if(instance == null){
-            instance = new Painter();
-        }
-        return instance;
-    }
-
-    public function set_scene(s2d : Scene) : Void {
-        this.s2d = s2d;
-    }
+class Painter extends Artist {
 
     public function drawVert(vert : Vert) : Void {
         //specify a color we want to draw with

@@ -4,15 +4,9 @@ import h2d.Scene;
 import hxd.fmt.spine.Data.SkinnedVertice;
 import vanGraph.tools.BasicShape;
 import vanGraph.objects.Sketch;
-class Sketcher {
+class Sketcher extends Artist {
 
     private var currentSketch : Sketch;
-    private var s2d : Scene;
-
-    public function new(s2d: Scene) {
-        this.s2d = s2d;
-    }
-
     private var sketchDict : Map<Int,Sketch> = new Map<Int,Sketch>();
     private var nextSketchID : Int = 0;
 

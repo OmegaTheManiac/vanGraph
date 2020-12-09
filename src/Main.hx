@@ -1,3 +1,4 @@
+import hxd.res.DefaultFont;
 import h2d.Bitmap;
 import js.html.Path2D;
 import h3d.Vector;
@@ -17,22 +18,10 @@ class Main extends hxd.App {
     var location : h3d.Vector;
     override function init() {
         sketcher = new Sketcher(s2d);
-        location = new h3d.Vector(900,500,0,0);
-        sketcher.sketchCurvedShape(BasicShape.Heart, 20, 100);
+        location = new h3d.Vector(960,540,0,0);
+        sketcher.sketchCurvedShape(BasicShape.Circle, 200, 100);
         sketcher.drawCurrentSketch(location,0xff0000); 
-        sketcher.sketchCurvedShape(BasicShape.Heart, 19, 100);
-        sketcher.drawCurrentSketch(location,0x00ff00); 
-        sketcher.sketchCurvedShape(BasicShape.Heart, 18, 100);       
-        sketcher.drawCurrentSketch(location,0x0000ff); 
-        sketcher.sketchCurvedShape(BasicShape.Heart, 17, 100);
-        sketcher.drawCurrentSketch(location,0xff0000); 
-        sketcher.sketchCurvedShape(BasicShape.Heart, 16, 100);
-        sketcher.drawCurrentSketch(location,0x00ff00); 
-        sketcher.sketchCurvedShape(BasicShape.Heart, 15, 100);       
-        sketcher.drawCurrentSketch(location,0x0000ff); 
-        sketcher.sketchCurvedShape(BasicShape.Heart, 14, 100);
-        sketcher.drawCurrentSketch(location,0xff0000); 
-        sketcher.sketchCurvedShape(BasicShape.Heart, 13, 100);
+        sketcher.sketchCurvedShape(BasicShape.Circle, 100, 100);
         sketcher.drawCurrentSketch(location,0x00ff00); 
         /* 
         var dummy_vert_list = new Array<Vert>();
@@ -46,13 +35,19 @@ class Main extends hxd.App {
         Painter.get_instance().drawEdges(graph); 
         Painter.get_instance().drawVerts(this.graph);
 
-        */
         hxd.Res.initEmbed();
         var tile = hxd.Res.wendy.toTile();
         tile = tile.center();
         var bmp : Bitmap = new Bitmap(tile, s2d);
         bmp.x = 900;
         bmp.y = 525;
+        */
+
+        var font : h2d.Font = DefaultFont.get();
+        var tf = new h2d.Text(font);
+        tf.text = "My thoughts";
+        tf.textAlign = Center;
+        s2d.addChild(tf);
     }
 
     override function update(dt:Float) {
@@ -67,7 +62,7 @@ class Main extends hxd.App {
         */
         var tim = Std.int(time_elapsed);
         if(tim % 2 == 0) {
-            for(i in 0...8) {
+            for(i in 0...2) {
                 if(i%2 == 0) {    
                     sketcher.drawSketchByID(i,location,0xff0000); 
                 }
@@ -77,7 +72,7 @@ class Main extends hxd.App {
             }
         }
         if(tim % 2 != 0) {
-            for(i in 0...8) {
+            for(i in 0...2) {
                  if(i%2 == 0) {    
                     sketcher.drawSketchByID(i,location,0xff00ff); 
                 }
