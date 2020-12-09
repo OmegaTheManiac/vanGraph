@@ -1,0 +1,84 @@
+{ 
+	"id" : 0,
+	"ordinal_id" : 0,
+    "vert_list": [{
+    "id": 0,
+    "initColor": "0xff00ff",
+    "positionY": 200,
+    "positionX": 200,
+    "neighborIDs": [1, 2]
+},
+{
+    "id": 1,
+    "initColor": "0x00ff00",
+    "positionY": 100,
+    "positionX": 300,
+    "neighborIDs": [0]
+},
+{
+    "id": 2,
+    "initColor": "0x0000ff",
+    "positionY": 300,
+    "positionX": 300,
+    "neighborIDs": [0, 3]
+},
+{
+    "id": 3,
+    "initColor": "0xff0000",
+    "positionY": 200,
+    "positionX": 400,
+    "neighborIDs": [2, 4, 5, 6]
+},
+{
+    "id": 4,
+    "initColor": "0x00ff00",
+    "positionY": 100,
+    "positionX": 500,
+    "neighborIDs": [3, 7]
+},
+{
+    "id": 5,
+    "initColor": "0x0000ff",
+    "positionY": 200,
+    "positionX": 500,
+    "neighborIDs": [3, 7]
+},
+{
+    "id": 6,
+    "initColor": "0xff0000",
+    "positionY": 300,
+    "positionX": 500,
+    "neighborIDs": [3]
+},
+{
+    "id": 7,
+    "initColor": "0x00ff00",
+    "positionY": 200,
+    "positionX": 600,
+    "neighborIDs": [4, 5, 9]
+},
+{
+    "id": 8,
+    "initColor": "0x0000ff",
+    "positionY": 100,
+    "positionX": 700,
+    "neighborIDs": [9, 10]
+
+
+},
+{
+    "id": 9,
+    "initColor": "0xff0000",
+    "positionY": 300,
+    "positionX": 700,
+    "neighborIDs": [7, 9, 10]
+},
+{
+    "id": 10,
+    "initColor": "0xffff00",
+    "positionY": 200,
+    "positionX": 800,
+    "neighborIDs": [9, 8]
+}
+]
+}
